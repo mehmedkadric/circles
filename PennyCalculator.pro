@@ -37,15 +37,9 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
+INCLUDEPATH += /usr/local/include
 INCLUDEPATH += /usr/local/include/opencv4
 LIBS += -lopencv_core
 LIBS += -lopencv_imgproc
 LIBS += -lopencv_highgui
 LIBS += -L/usr/lib
-
-INCLUDEPATH += /usr/local/Cellar/nlohmann-json/3.9.1_1/include
-INCLUDEPATH += /usr/local/Cellar/pcl/1.11.1_1/include/pcl-1.11
-INCLUDEPATH += /usr/local/include/pcl-1.11
-INCLUDEPATH += /usr/local/include/pcl-1.6
-INCLUDEPATH += /usr/local/include
-INCLUDEPATH += /usr/local/include/eigen3
